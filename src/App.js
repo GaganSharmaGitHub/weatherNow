@@ -1,13 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-
+import MainArea from "./components/mainArea"
 function App() {
   return (
     <div className="App">
-      WeatherNow
+      <h1 className='titleHead'>WeatherNow</h1>
+      <MainArea/>
     </div>
   );
 }
-
 export default App;

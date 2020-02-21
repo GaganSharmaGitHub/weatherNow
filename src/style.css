@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+:root {
+  --bg-1-color: #0059ff;
+  --bg-2-color: #008be7;
+  --bg-3-color: #3498db;
+  --bg-4-color: #bdecff;
+  --text-1-color: rgb(255, 255, 255);
+  --text-2-color: coral;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Cookie', ;
+  font-family: 'Lato', sans-serif;
+  padding: 0px;
+
+}
+.App{
+  padding: 0px;
+  margin: 0px;
+	background: linear-gradient(-45deg, var(--bg-1-color), var(--bg-2-color), var(--bg-3-color), var(--bg-4-color));
+	background-size: 400% 400%;
+	animation: gradient 5s ease infinite;
+  height: 100vh;
+  width: 100vw;
+}
+.titleHead{
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Lobster';
+  color: var(--text-1-color);
+  font-size: 100px;
+  height: fit-content;
+  width: 100vw;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
