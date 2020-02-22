@@ -19,11 +19,15 @@ export default class CityForm extends Component {
     }
     render() {
         return (
-            
+        <div className='formContainer'>
+        <h2>Enter your city name.....</h2>
+        <h3 className='message'>{this.props.message}</h3>
+        <br></br>
         <form onSubmit={this.handleSubmit} className='cityForm'>
         <input value={this.state.value} onChange={this.handleChange}></input>
-        <button>Search</button>
+        <button><i className="fa fa-search"></i></button>
     </form>
+    </div>
         )
     }
 }

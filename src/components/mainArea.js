@@ -7,7 +7,8 @@ export default class MainArea extends Component {
         this.state={
         g:"Londo",
          weather:{},
-         citySet: false
+         citySet: false,
+         message:""
         }
         this.updateWeather=this.updateWeather.bind(this)
         //this.changeLocation=this.changeLocation.bind(this)
@@ -32,7 +33,8 @@ export default class MainArea extends Component {
     
     }
     else{
-        this.cityNotFound()
+        
+    this.setState(()=>({message:"City Not Found"}))
     }
     console.log(this.state)
     })
@@ -42,7 +44,7 @@ export default class MainArea extends Component {
         return (
             <div className='mainArea'>
                 {this.state.citySet?<Weather weather={this.state.weather} />:
-                <CityForm updateWeather={this.updateWeather}></CityForm>}
+                <CityForm message={this.state.message} updateWeather={this.updateWeather}></CityForm>}
             </div>
         )
     }
